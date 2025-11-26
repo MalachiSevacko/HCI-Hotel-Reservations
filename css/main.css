@@ -113,3 +113,115 @@
   margin-top: 2rem;
 }
 
+/*=========================================== Contact Page =============================================*/
+.contact-page {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.contact-subtitle {
+  max-width: 550px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+}
+
+.contact-section-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* form block has a simple card-like look */
+.contact-form {
+  padding-top: 0.5rem;
+}
+
+/* info list */
+.contact-info-list {
+  margin-top: 0.75rem;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.contact-icon {
+  display: inline-flex;
+  width: 1.8rem;
+  justify-content: center;
+  margin-right: 0.4rem;
+}
+
+/* make sure contact layout looks good on small screens */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2rem;
+  }
+}
+
+/* Contact form submission overlay */
+.submission-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050; /* above navbar */
+}
+
+.submission-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.submission-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background-color: #28a745;
+  color: #fff;
+}
+
+.submission-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.submission-text {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Center the contact info column content */
+.contact-info {
+  text-align: center;
+}
+
+.contact-info ul {
+  padding-left: 0;
+}
+
+.contact-info li {
+  margin-bottom: 0.25rem;
+}
+
+/*============================================ End Contact Page============================================*/
