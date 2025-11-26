@@ -224,4 +224,54 @@
   margin-bottom: 0.25rem;
 }
 
-/*============================================ End Contact Page============================================*/
+/*========================================== End Contact Page ==========================================*/
+/*=============================================== Login =================================================*/
+
+/* Login / sign-up page */
+.login-page h1 {
+  font-weight: 700;
+}
+
+.auth-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.auth-card {
+  border: 1px solid #000;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.auth-heading {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.btn-auth {
+  width: 100%;
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+/* Make login and signup boxes the same height */
+.auth-wrapper .col-md-5 {
+  display: flex;              /* let the column stretch */
+}
+
+.auth-card {
+  display: flex;
+  flex-direction: column;     /* stack content vertically */
+  height: 100%;               /* fill the column height */
+}
+
+/* keep big buttons at the bottom and same width */
+.btn-auth {
+  margin-top: auto;           /* push button to bottom of card */
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+/*============================================= End Login ================================================*/
