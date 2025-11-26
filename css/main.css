@@ -1,1 +1,115 @@
+.hero {
+  position: relative;
+  height: 320px;
+  background-image: url("images/hero.jpg"); 
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.25);
+  color: #000;
+}
+
+.hero-overlay h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.25rem;
+}
+.hero-overlay p {
+  margin-bottom: 1rem;
+}
+
+/* searchbarr */
+.search-bar {
+  display: flex;
+  gap: 0.5rem;
+  background: white;
+  padding: 0.5rem;
+  border: 1px solid #000;
+}
+.search-bar input {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #000;
+}
+.search-bar button {
+  padding: 0.4rem 1rem;
+  border: 1px solid #000;
+  background: white;
+}
+
+/* featured */
+.featured {
+  padding: 2rem 2rem 0;
+  text-align: center;
+}
+.featured-row {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.hotel-card {
+  width: 210px;
+  border: 2px solid #000;
+  background: #fff;
+}
+.hotel-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+.card-body {
+  padding: 0.75rem;
+}
+.card-body h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+.card-body p {
+  margin-bottom: 0.5rem;
+}
+.btn-outline {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border: 2px solid #000;
+  text-decoration: none;
+  color: #000;
+  font-size: 0.9rem;
+}
+
+/* why choose us message */
+.why {
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+.why-row {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+.why-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.why-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* footer */
+.footer {
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 2rem;
+}
 
