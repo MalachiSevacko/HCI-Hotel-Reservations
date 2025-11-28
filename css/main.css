@@ -275,3 +275,74 @@
 }
 
 /*============================================= End Login ================================================*/
+
+/*============================================= Beginning of Hotel Details ================================================*/
+
+/* Big page title */
+.hotel-title h1 {
+  font-size: 2.2rem;
+  margin-top: 0.5rem;
+}
+
+/* Main condo image */
+.hotel-main-img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border: 2px solid #000;
+}
+
+/* Gallery images */
+.hotel-gallery-img {
+  width: 230px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #000;
+}
+
+/* About & rooms headings */
+.hotel-about h2,
+.hotel-rooms h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.hotel-about p {
+  max-width: 700px;
+  margin-top: 0.25rem;
+}
+
+/* Room cards */
+.room-card {
+  border: 2px solid #000;
+  background: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.room-image img {
+  width: 260px;
+  height: 170px;
+  object-fit: cover;
+  border-right: 2px solid #000;
+}
+
+.room-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.room-info p {
+  margin-bottom: 0.3rem;
+}
+
+.room-price {
+  font-weight: bold;
+}
+
+/* Reviews button */
+.reviews-btn {
+  border: 2px solid #000;
+  background: #fff;
+}
+
+/*============================================= Ending of Hotel Details ================================================*/
