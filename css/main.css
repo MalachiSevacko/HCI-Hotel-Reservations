@@ -378,3 +378,40 @@
 }
 
 /*=============================================       End Book          ================================================*/
+/*=============================================  Booking Confirmation   ================================================*/
+
+.confirmation-page h1 {
+  font-weight: 700;
+}
+
+.confirmation-card {
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  border: 1px solid #000;
+  padding: 2rem 2.5rem;
+  background-color: #fff;
+}
+
+.confirmation-card h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.confirmation-card p {
+  margin-bottom: 0.75rem;
+}
+
+.confirmation-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.btn-confirm {
+  min-width: 200px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+/*============================================  End Booking Confirmation ===============================================*/
