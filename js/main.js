@@ -90,3 +90,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+  /* ---------- BOOKING PAGE ---------- */
+  const bookingForm = document.getElementById('bookingForm');
+
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', (event) => {
+      event.preventDefault();   // stop the normal submit for a moment
+
+      // Run HTML5 validation: required, email, date, pattern, etc.
+      if (!bookingForm.checkValidity()) {
+        bookingForm.reportValidity();  // show the browser's own messages
+        return;
+      }
+
+      // If everything is valid, go to the confirmation page
+      window.location.href = 'booking_confirmation.html';
+    });
+  }
