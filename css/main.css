@@ -416,100 +416,52 @@
 
 /*============================================  End Booking Confirmation ===============================================*/
 /*=============================================== Search Results =================================================*/
-/* Sidebar */
-.filter-box {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-  border: 1px solid rgba(0,0,0,0.15);
-  position: sticky;
-  top: 20px;
-  transform: scale(1.02);
-}
 
-.filter-section {
-  margin-bottom: 20px;
-}
-
-.filter-section h6 {
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: #333;
-}
-
-.filter-section label {
-  font-size: 0.95rem;
-  color: #444;
-}
-
-.filter-section input[type="checkbox"] {
-  margin-right: 6px;
-}
-
-.search-bar {
-  border-radius: 10px;
-}
-
-/* Dropdowns */
-.form-select {
-  border-radius: 10px;
-}
-
-/* Apply Button */
-.filter-box button {
-  border-radius: 10px;
-  padding: 10px;
-  margin-top: 10px;
-}
-
-/* Filters */
-.applied-filters {
-  padding: 10px 0;
-  margin-bottom: 10px;
-}
-
-.applied-filters span {
-  background: #e9ecef;
-  border-radius: 12px;
-  padding: 6px 12px;
-  margin: 4px;
-  display: inline-block;
-  font-size: 0.9rem;
-}
-
-/* Room cards */
 .room-results {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+/* Individual card */
 .room-card {
-  background: white;
+  background: #ffffff;
   padding: 18px;
   border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   display: flex;
   gap: 20px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Hover animation for room cards */
 .room-card:hover {
   transform: translateY(-4px) scale(1.015);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
 }
 
-/* Room Images */
-.room-card img {
-  width: 180px;
-  height: 130px;
+/* Image: consistent size across cards */
+.room-image {
+  flex-shrink: 0;
+  width: 230px;
+  height: 160px;
   object-fit: cover;
   border-radius: 14px;
 }
 
-/* Room Info */
+/* Content area next to image */
+.room-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  gap: 16px;
+}
+
+/* Left side: text details */
+.room-details {
+  flex: 1;
+}
+
 .room-details h3 {
   margin-bottom: 8px;
 }
@@ -518,15 +470,63 @@
   margin: 3px 0;
 }
 
-.price {
+/* Right side: price + button */
+.room-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-width: 170px;
+  text-align: right;
+}
+
+.room-actions .price {
   font-size: 1.1rem;
   color: #1b6ec2;
   font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-/* "View Details" Button */
+/* Button look inside cards */
 .room-card .btn-secondary {
   border-radius: 10px;
   padding: 8px 16px;
 }
+
+/* Applied filters row */
+.applied-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.applied-filters span {
+  background-color: #f1f3f5;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+}
+
+/* Stack layout on smaller screens */
+@media (max-width: 768px) {
+  .room-card {
+    flex-direction: column;
+  }
+
+  .room-content {
+    flex-direction: column;
+  }
+
+  .room-actions {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .room-image {
+    width: 100%;
+    height: 200px;
+  }
+}
+
 /*========================================== End Search Results ==========================================*/
