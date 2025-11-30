@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   height: 320px;
-  background-image: url("images/hero.jpg"); 
+  background-image: url("../assets/img/top-photo.jpg"); 
   background-size: cover;
   background-position: center;
 }
