@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+  .booking-card {
+    padding: 25px;
+    min-height: 220px;
+  }
+
+  .booking-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+</style>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HCI Hotel Reservations - My Bookings</title>
@@ -24,17 +38,14 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="search_results.html">Search Hotels</a></li>
-
-          <!-- Only ONE tab for bookings -->
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="bookings.html">My Bookings</a></li>
-
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="my_bookings.html">My Bookings</a>
+          </li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-
       </div>
 
       <a href="login.html" style="text-decoration: none;">
@@ -46,96 +57,93 @@
   <!-- MAIN CONTENT -->
   <main class="container my-5">
 
-    <!-- HEADER -->
-    <h1 class="text-center mb-3">My Bookings</h1>
+    <h1 class="text-center mb-5">My Bookings</h1>
 
-    <!-- NO BOOKINGS MESSAGE -->
-    <p class="text-center fs-5 text-muted mb-5">No active bookings</p>
+    <h2 class="mb-4">Upcoming Bookings</h2>
 
-    <!-- BOOKING FORM BELOW -->
-    <h2 class="text-center mb-4">Make a New Booking</h2>
+    <!-- BOOKING CARD TEMPLATE -->
+    <!-- Each card is one booking -->
+    <!-- ------------------------------ -->
 
-    <div class="booking-card p-4">
-      <form action="booking_confirmation.html" method="get" id="bookingForm" novalidate>
-
-        <div class="row g-4">
-
-          <!-- LEFT COLUMN -->
-          <section class="col-md-6">
-            <h3 class="booking-section-title">Guest Information</h3>
-
-            <div class="mb-3">
-              <label for="guestName" class="form-label">Full Name</label>
-              <input type="text" id="guestName" name="guestName" class="form-control" required>
-            </div>
-
-            <div class="mb-3">
-              <label for="guestEmail" class="form-label">Email Address</label>
-              <input type="email" id="guestEmail" name="guestEmail" class="form-control" required>
-            </div>
-
-            <div class="mb-3">
-              <label for="guestPhone" class="form-label">Phone Number</label>
-              <input type="tel" id="guestPhone" name="guestPhone" class="form-control" required>
-            </div>
-
-            <div class="mb-3">
-              <label for="checkIn" class="form-label">Check In</label>
-              <input type="date" id="checkIn" name="checkIn" class="form-control" required>
-            </div>
-
-            <div class="mb-3">
-              <label for="checkOut" class="form-label">Check Out</label>
-              <input type="date" id="checkOut" name="checkOut" class="form-control" required>
-            </div>
-          </section>
-
-          <!-- RIGHT COLUMN -->
-          <section class="col-md-6">
-            <h3 class="booking-section-title">Room & Payment</h3>
-
-            <div class="mb-3">
-              <label for="roomType" class="form-label">Room Type</label>
-              <select id="roomType" name="roomType" class="form-select" required>
-                <option value="">Select a Room</option>
-                <option value="deluxe">Deluxe Suite - $180/night</option>
-                <option value="standard">Standard Room - $120/night</option>
-              </select>
-            </div>
-
-            <div class="mb-3">
-              <label for="cardName" class="form-label">Cardholder Name</label>
-              <input type="text" id="cardName" name="cardName" class="form-control" required>
-            </div>
-
-            <div class="mb-3">
-              <label for="cardNumber" class="form-label">Card Number</label>
-              <input type="text" id="cardNumber" name="cardNumber" class="form-control" required>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="expDate" class="form-label">Expiration</label>
-                <input type="month" id="expDate" name="expDate" class="form-control" required>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="cvv" class="form-label">CVV</label>
-                <input type="text" id="cvv" name="cvv" pattern="[0-9]{3,4}" class="form-control" required>
-              </div>
-            </div>
-
-            <p class="fw-semibold mt-3">Total: Calculated at confirmation</p>
-          </section>
+    <!-- Card 1 -->
+    <section class="border mb-4 p-3 booking-card">
+      <div class="row align-items-center g-3">
+        <div class="col-md-3">
+          <img src="assets/img/condo-gallery1.jpg" class="img-fluid rounded" alt="">
         </div>
 
-        <div class="text-center mt-4">
-          <button type="submit" class="btn btn-outline-dark btn-booking">
-            Submit Booking
-          </button>
+        <div class="col-md-7">
+          <h3 class="h5 mb-1">Hotel - Sunrise Resort</h3>
+          <p class="mb-1">Miami, Florida ~ October 28-30, 2025</p>
+          <p class="mb-0">Total: $360 ~ Confirmation #4620677</p>
         </div>
 
-      </form>
-    </div>
+        <div class="col-md-2 text-md-end">
+          <button class="btn btn-outline-secondary w-100">View</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card 2 -->
+    <section class="border mb-4 p-3 booking-card">
+      <div class="row align-items-center g-3">
+        <div class="col-md-3">
+          <img src="assets/img/hotel2.jpg" class="img-fluid rounded" alt="">
+        </div>
+
+        <div class="col-md-7">
+          <h3 class="h5 mb-1">Condominium - Lake Erie</h3>
+          <p class="mb-1">Cleveland, Ohio ~ November 1-3, 2025</p>
+          <p class="mb-0">Total: $360 ~ Confirmation #8624930</p>
+        </div>
+
+        <div class="col-md-2 text-md-end">
+          <button class="btn btn-outline-secondary w-100">View</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card 3 -->
+    <section class="border mb-4 p-3 booking-card">
+      <div class="row align-items-center g-3">
+        <div class="col-md-3">
+          <img src="assets/img/room1.jpg" class="img-fluid rounded" alt="">
+        </div>
+
+        <div class="col-md-7">
+          <h3 class="h5 mb-1">Mountain Vista Lodge</h3>
+          <p class="mb-1">Denver, Colorado ~ December 20-23, 2025</p>
+          <p class="mb-0">Total: $740 ~ Confirmation #2291834</p>
+        </div>
+
+        <div class="col-md-2 text-md-end">
+          <button class="btn btn-outline-secondary w-100">View</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card 4 -->
+    <section class="border mb-4 p-3 booking-card">
+      <div class="row align-items-center g-3">
+        <div class="col-md-3">
+          <img src="assets/img/room3.jpg" class="img-fluid rounded" alt="">
+        </div>
+
+        <div class="col-md-7">
+          <h3 class="h5 mb-1">Downtown City Hotel</h3>
+          <p class="mb-1">Chicago, Illinois ~ January 8-10, 2026</p>
+          <p class="mb-0">Total: $420 ~ Confirmation #7749021</p>
+        </div>
+
+        <div class="col-md-2 text-md-end">
+          <button class="btn btn-outline-secondary w-100">View</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- No past bookings -->
+    <h2 class="mt-5">No Past Bookings</h2>
+
   </main>
 
   <!-- FOOTER -->
@@ -154,7 +162,6 @@
   </footer>
 
   <!-- JS -->
-  <script src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
