@@ -1,7 +1,48 @@
+/*=========================================== Overall Styles =============================================*/
+
+/* buttons */
+.btn-primary {
+  background-color: #67AAF9;
+  border-color: #67AAF9;
+  color: #003B2E;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #36F1CD; 
+  border-color: #36F1CD;
+  color: #003B2E;
+}
+
+.btn-secondary {
+  background-color: #D56062;
+  border-color: #D56062;
+  color: white;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+  background-color: #F37748; 
+  border-color: #F37748;
+  color: white;
+}
+
+/* footer */
+.footer {
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 2rem;
+}
+
+/*=========================================== Ending of Overall Styles =============================================*/
+/*=========================================== Home Page =============================================*/
 .hero {
   position: relative;
   height: 320px;
-  background-image: url("../assets/img/top-photo.jpg"); 
+  background-image: url("../assets/img/hero.png"); 
   background-size: cover;
   background-position: center;
 }
@@ -15,33 +56,40 @@
   justify-content: center;
   text-align: center;
   background: rgba(0, 0, 0, 0.25);
-  color: #000;
+  color: #ffffff;
 }
 
 .hero-overlay h1 {
+  text-shadow:
+    0 3px 6px rgba(0, 0, 0, 0.55),
+    0 2px 4px rgba(0, 0, 0, 0.45);
   font-size: 2.2rem;
   margin-bottom: 0.25rem;
 }
 .hero-overlay p {
+  text-shadow:
+    0 3px 6px rgba(0, 0, 0, 0.55),
+    0 2px 4px rgba(0, 0, 0, 0.45);
   margin-bottom: 1rem;
 }
 
-/* searchbarr */
+/* searchbar */
 .search-bar {
   display: flex;
   gap: 0.5rem;
-  background: white;
+  background: #67AAF9;
   padding: 0.5rem;
-  border: 1px solid #000;
+  border-radius: 12px;        
+  border: none;               
 }
+
 .search-bar input {
   padding: 0.4rem 0.6rem;
-  border: 1px solid #000;
-}
-.search-bar button {
-  padding: 0.4rem 1rem;
-  border: 1px solid #000;
   background: white;
+  border-radius: 10px;        
+  border: none;               
+  outline: none;
+  caret-color: #000;
 }
 
 /* featured */
@@ -49,16 +97,30 @@
   padding: 2rem 2rem 0;
   text-align: center;
 }
+
 .featured-row {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
+
 .hotel-card {
   width: 210px;
-  border: 2px solid #000;
-  background: #fff;
+  border-radius: 16px;        
+  border: none;               
+  overflow: hidden;           
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.75);
+  padding: 18px;
+  box-shadow: 
+    0 4px 14px rgba(0,0,0,0.18), 
+    0 0 0 1px rgba(255,255,255,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
 }
 .hotel-card img {
   width: 100%;
@@ -74,14 +136,6 @@
 }
 .card-body p {
   margin-bottom: 0.5rem;
-}
-.btn-outline {
-  display: inline-block;
-  padding: 0.35rem 0.9rem;
-  border: 2px solid #000;
-  text-decoration: none;
-  color: #000;
-  font-size: 0.9rem;
 }
 
 /* why choose us message */
@@ -105,14 +159,7 @@
   margin-bottom: 0.5rem;
 }
 
-/* footer */
-.footer {
-  padding: 1rem;
-  text-align: center;
-  border-top: 1px solid #ddd;
-  margin-top: 2rem;
-}
-
+/*=========================================== Ending of Home Page =============================================*/
 /*=========================================== Contact Page =============================================*/
 .contact-page {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -228,50 +275,67 @@
 /*=============================================== Login =================================================*/
 
 /* Login / sign-up page */
-.login-page h1 {
-  font-weight: 700;
-}
 
+/* Wrapper */
 .auth-wrapper {
   max-width: 1000px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
 }
 
+/* Auth Cards */
 .auth-card {
-  border: 1px solid #000;
+  background-color: #67AAF9;  /* light mode */
+  color: #003B2E;             /* dark text for light mode */
+  border: none;
+  border-radius: 16px;
   padding: 2rem;
-  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s, color 0.25s;
 }
 
+.auth-card:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.25);
+}
+
+/* Headings */
 .auth-heading {
   text-align: center;
   font-size: 1.4rem;
-  font-weight: 700;
   margin-bottom: 1.5rem;
+  color: #003B2E;
 }
 
-.btn-auth {
-  width: 100%;
-  font-size: 1.25rem;
-  margin-top: 1.5rem;
+/* Form inputs */
+.auth-card .form-control {
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  color: #000000;
 }
 
-/* Make login and signup boxes the same height */
+/* Checkbox spacing */
+.auth-card .form-check {
+  margin-bottom: 1rem;
+}
+
+/* Ensure columns stretch to same height */
 .auth-wrapper .col-md-5 {
-  display: flex;              /* let the column stretch */
+  display: flex;
 }
 
 .auth-card {
-  display: flex;
-  flex-direction: column;     /* stack content vertically */
-  height: 100%;               /* fill the column height */
-}
-
-/* keep big buttons at the bottom and same width */
-.btn-auth {
-  margin-top: auto;           /* push button to bottom of card */
-  width: 100%;
-  font-size: 1.25rem;
+  flex: 1;
 }
 
 /*============================================= End Login ================================================*/
@@ -282,6 +346,7 @@
 .hotel-title h1 {
   font-size: 2.2rem;
   margin-top: 0.5rem;
+  text-align: center;
 }
 
 /* Main condo image */
@@ -289,7 +354,6 @@
   width: 100%;
   max-height: 280px;
   object-fit: cover;
-  border: 2px solid #000;
 }
 
 /* Gallery images */
@@ -297,7 +361,6 @@
   width: 230px;
   height: 150px;
   object-fit: cover;
-  border: 2px solid #000;
 }
 
 /* About & rooms headings */
@@ -307,23 +370,49 @@
   margin-bottom: 0.5rem;
 }
 
+/* About text */
 .hotel-about p {
   max-width: 700px;
   margin-top: 0.25rem;
+  line-height: 1.5;
 }
 
 /* Room cards */
 .room-card {
-  border: 2px solid #000;
-  background: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-md-row: row;
+  align-items: stretch;
+  border: none;
+  border-radius: 16px;
+  padding: 0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
   margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.room-card:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.2);
+}
+
+/* Room image */
 .room-image img {
-  width: 260px;
+  width: 100%;
+  max-width: 260px;
   height: 170px;
   object-fit: cover;
-  border-right: 2px solid #000;
+  border-radius: 0;
+}
+
+/* Room info */
+.room-info {
+  flex-grow: 1;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .room-info h3 {
@@ -336,65 +425,55 @@
 }
 
 .room-price {
-  font-weight: bold;
+  font-weight: 600;
+  color: #69A2B0; /* highlight price with theme color */
 }
 
-/* Reviews button */
-.reviews-btn {
-  border: 2px solid #000;
-  background: #fff;
+/* Room CTA button */
+.room-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
 /*============================================= Ending of Hotel Details ================================================*/
 /*=============================================      Begin Book         ================================================*/
 
-.booking-card {
-  border: 1px solid #000;
+.b-booking-card {
   padding: 2rem 2.5rem;
   max-width: 1100px;
   margin: 0 auto;
-  background-color: #fff;
 }
 
 .booking-section-title {
   font-size: 1.5rem;
-  font-weight: 700;
   margin-bottom: 1.25rem;
 }
 
 .booking-total {
-  background-color: #e0e0e0;
+  background-color: #36F1CD;
+  color: #000;
+  border-radius: 8px;
   padding: 1rem 1.5rem;
   text-align: center;
   font-weight: 600;
   font-size: 1.05rem;
-  border: 1px solid #000;
-}
-
-.btn-booking {
-  width: 100%;
-  max-width: 320px;
-  font-size: 1.25rem;
 }
 
 /*=============================================       End Book          ================================================*/
 /*=============================================  Booking Confirmation   ================================================*/
 
-.confirmation-page h1 {
-  font-weight: 700;
-}
 
 .confirmation-card {
   max-width: 650px;
   margin: 0 auto 2rem;
-  border: 1px solid #000;
   padding: 2rem 2.5rem;
-  background-color: #fff;
+  border-radius:12px;
 }
 
 .confirmation-card h2 {
   font-size: 1.25rem;
-  font-weight: 700;
   margin-bottom: 1.5rem;
 }
 
@@ -411,57 +490,104 @@
 .btn-confirm {
   min-width: 200px;
   padding: 0.75rem 1.5rem;
-  font-size: 1rem;
 }
 
 /*============================================  End Booking Confirmation ===============================================*/
 /*=============================================== Search Results =================================================*/
 
+/* Filter box */
+.filter-box {
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  border: 1px solid rgba(0,0,0,0.15);
+  position: sticky;
+  top: 20px;
+  transform: scale(1.02);
+}
+
+.filter-box button {
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Search section */
+.search-section {
+  margin-bottom: 20px;
+}
+
+.search-section h6 {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.search-section label {
+  font-size: 0.95rem;
+}
+
+.search-section input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+.form-select {
+  border-radius: 10px;
+}
+
+/* Filters sections */
+.applied-filters {
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.applied-filters span {
+  background-color:#D56062;
+  color: white;
+  border-radius: 12px;
+  padding: 6px 12px;
+  margin: 4px;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.applied-filters span:hover{
+  background-color: #F37748; 
+  color: white;
+}
+
+/* Room cards */
 .room-results {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* Individual card */
-.room-card {
-  background: #ffffff;
+.s-room-card {
   padding: 18px;
   border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  background: transparent;
+  border: none;
+  box-shadow: 
+    0 4px 14px rgba(0,0,0,0.18), 
+    0 0 0 1px rgba(255,255,255,0.06);
   display: flex;
   gap: 20px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.room-card:hover {
+.s-room-card:hover {
   transform: translateY(-4px) scale(1.015);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
 }
 
-/* Image: consistent size across cards */
-.room-image {
-  flex-shrink: 0;
-  width: 230px;
-  height: 160px;
+/* Room Images */
+.s-room-card img {
+  width: 260px;
+  height: 170px;
   object-fit: cover;
-  border-radius: 14px;
 }
 
-/* Content area next to image */
-.room-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  width: 100%;
-  gap: 16px;
-}
-
-/* Left side: text details */
-.room-details {
-  flex: 1;
-}
-
+/* Room Details */
 .room-details h3 {
   margin-bottom: 8px;
 }
@@ -470,103 +596,73 @@
   margin: 3px 0;
 }
 
-/* Right side: price + button */
-.room-actions {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  min-width: 170px;
-  text-align: right;
-}
-
-.room-actions .price {
+.price {
   font-size: 1.1rem;
-  color: #1b6ec2;
+  color: #67AAF9;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-/* Button look inside cards */
-.room-card .btn-secondary {
-  border-radius: 10px;
-  padding: 8px 16px;
-}
-
-/* Applied filters row */
-.applied-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-
-.applied-filters span {
-  background-color: #f1f3f5;
-  border-radius: 999px;
-  padding: 4px 10px;
-  font-size: 0.85rem;
-}
-
-/* Stack layout on smaller screens */
-@media (max-width: 768px) {
-  .room-card {
-    flex-direction: column;
-  }
-
-  .room-content {
-    flex-direction: column;
-  }
-
-  .room-actions {
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .room-image {
-    width: 100%;
-    height: 200px;
-  }
 }
 
 /*========================================== End Search Results ==========================================*/
 /*========================================== Beginnging of Reviews ==========================================*/
 
+/* Reviews section title */
 .reviews-title {
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
-/* Each review box */
+/* Each review card */
 .review-card {
-  border: 2px solid #000;
-  background: #fff;
-  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;        /* image left, text right */
+  align-items: stretch;
+  gap: 1rem;
+  border-radius: 16px;       /* match hotel cards */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
   padding: 1rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background: inherit;       /* don't override background */
 }
 
-/* Left image */
+.review-card:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.2);
+}
+
+/* Left image wrapper */
 .review-image-wrapper {
-  flex: 0 0 200px;
+  flex: 0 0 200px;            /* fixed width */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  border-radius: 12px;        /* rounded like hotel cards */
+  overflow: hidden;           /* ensure image respects rounding */
+  margin-bottom: 0;           /* remove extra margin for horizontal layout */
 }
 
 .review-image-wrapper img {
   width: 180px;
   height: 180px;
   object-fit: cover;
-  border: 2px solid #000;
+  border-radius: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.review-image-wrapper img:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
 /* Right-side text */
 .review-content {
   flex: 1;
   padding: 0 1.5rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .review-content h2 {
@@ -577,16 +673,88 @@
 .review-rating {
   font-weight: 600;
   margin-bottom: 0.75rem;
+  color: #69A2B0;              /* theme color like hotel cards */
 }
 
 .review-text {
   max-width: 700px;
-  margin: 0 auto;
-}
-
-.back-to-hotel-btn {
-  border: 2px solid #000;
-  background: #fff;
+  margin: 0;
+  line-height: 1.4;
 }
 
 /*========================================== Ending of Reviews ==========================================*/
+/*========================================== My Bookings ==========================================*/
+
+.booking-card {
+  padding: 25px;
+  min-height: 220px;
+  border-radius: 16px;
+  background: transparent;
+  border: none;
+  box-shadow: 
+    0 4px 14px rgba(0,0,0,0.18), 
+    0 0 0 1px rgba(255,255,255,0.06);
+  display: flex;
+  gap: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.booking-card:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+.booking-card img {
+  width: 260px;
+  height: 170px;
+  object-fit: cover;
+}
+
+/*========================================== Ending of My Bookings ==========================================*/
+/*========================================== Dark Mode Button ==========================================*/
+
+.btn-bd-primary { 
+  --bd-mint-bg: #67AAF9;
+  --bd-mint-rgb: 169, 240, 209;
+
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: #003B2E; 
+  --bs-btn-bg: var(--bd-mint-bg);
+  --bs-btn-border-color: var(--bd-mint-bg);
+
+  --bs-btn-hover-color: #003B2E;
+  --bs-btn-hover-bg: #36F1CD; 
+  --bs-btn-hover-border-color: #36F1CD;
+
+  --bs-btn-focus-shadow-rgb: var(--bd-mint-rgb);
+
+  --bs-btn-active-color: #003B2E;
+  --bs-btn-active-bg: #67AAF9;
+  --bs-btn-active-border-color: #67AAF9;
+}
+
+.bd-mode-toggle .dropdown-menu .dropdown-item {
+    background-color: transparent !important;
+    color: var(--bs-body-color);
+}
+
+.bd-mode-toggle .dropdown-menu .dropdown-item:hover {
+    background-color: #67AAF9 !important;
+    color: #003B2E !important;
+}
+
+.bd-mode-toggle .dropdown-menu .dropdown-item:focus,
+.bd-mode-toggle .dropdown-menu .dropdown-item:active {
+    background-color: #36F1CD !important;
+    color: #003B2E !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.bd-mode-toggle .dropdown-menu .dropdown-item.active,
+.bd-mode-toggle .dropdown-menu .dropdown-item[aria-pressed="true"] {
+    background-color: #67AAF9 !important;
+    color: #003B2E !important;
+}
+
+/*========================================== End of Dark Mode Button ==========================================*/
