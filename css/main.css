@@ -530,3 +530,63 @@
 }
 
 /*========================================== End Search Results ==========================================*/
+/*========================================== Beginnging of Reviews ==========================================*/
+
+.reviews-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Each review box */
+.review-card {
+  border: 2px solid #000;
+  background: #fff;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+/* Left image */
+.review-image-wrapper {
+  flex: 0 0 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.review-image-wrapper img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 2px solid #000;
+}
+
+/* Right-side text */
+.review-content {
+  flex: 1;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.review-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.review-rating {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.review-text {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.back-to-hotel-btn {
+  border: 2px solid #000;
+  background: #fff;
+}
+
+/*========================================== Ending of Reviews ==========================================*/
